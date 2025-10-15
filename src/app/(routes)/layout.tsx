@@ -1,5 +1,6 @@
 import './index.css';
 
+import { AppLayout } from '@components/layout';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -7,8 +8,12 @@ export const metadata: Metadata = {
 };
 
 const RootLayout: FCC = ({ children }) => (
-  <html lang='en'>
-    <body>{children}</body>
+  <html lang='sk'>
+    <body className='flex min-h-screen flex-col'>
+      {/* <Providers> */}
+      <AppLayout>{children}</AppLayout>
+      {/* </Providers> */}
+    </body>
   </html>
 );
 
