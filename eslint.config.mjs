@@ -38,11 +38,7 @@ export default [
     ],
   },
   {
-    ignores: [
-      '**/postcss.config.mjs',
-      '**/eslint.config.mjs',
-      '**/vitest.config.mts',
-    ],
+    ignores: ['**/postcss.config.mjs', '**/eslint.config.mjs'],
   },
   ...compat.extends(
     'next/typescript',

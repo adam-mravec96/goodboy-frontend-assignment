@@ -2,7 +2,12 @@ import { Mail, MapPin, MoveLeft, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const CONTACT_INFO = [
+const CONTACT_INFO: ReadonlyArray<{
+  value: React.ReactNode;
+  icon: React.ReactNode;
+  type: string;
+  text: string;
+}> = [
   {
     type: 'Email',
     text: 'Our friendly team is here to help.',
@@ -44,7 +49,7 @@ const CONTACT_INFO = [
     ),
     icon: <Phone className='text-indigo-600' size={24} />,
   },
-] as const;
+];
 
 const ContactPage = () => (
   <main className='max-w-8xl mx-auto px-4 pt-4 pb-4'>

@@ -1,7 +1,6 @@
+import { Statistics } from '@routes/(base)/about/statistics';
 import { MoveLeft } from 'lucide-react';
 import Link from 'next/link';
-
-import { Statistics } from './statistics';
 
 const AboutPage = () => (
   <main className='max-w-8xl mx-auto px-4 pt-4 pb-12'>

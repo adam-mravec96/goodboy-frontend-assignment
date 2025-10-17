@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Goodboy',
 };
 
-const RootLayout: FCC = ({ children }) => (
+const RootLayout = ({ children }: LayoutProps<'/'>) => (
   <html lang='sk'>
     <body className='flex min-h-screen flex-col'>
       <Providers>

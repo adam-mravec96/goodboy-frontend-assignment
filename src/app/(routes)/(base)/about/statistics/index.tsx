@@ -62,6 +62,7 @@ export const Statistics = () => {
         </h2>
         <p className='mt-2 text-slate-500'>Celková vyzbieraná hodnota</p>
       </div>
+
       <div>
         <h2 className='text-6xl font-bold text-indigo-600'>
           <CountUp end={data.contributors} duration={2.0} separator=' ' />
