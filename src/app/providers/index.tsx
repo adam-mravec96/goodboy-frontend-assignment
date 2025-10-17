@@ -1,16 +1,11 @@
-'use client';
+import { ModalProvider } from '@app/contexts/modal';
+import { QueryClientProvider } from '@app/providers/client';
+import { ToastProvider } from '@app/providers/toast';
 
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
-import { useState } from 'react';
-
-export const Providers: FCC = ({ children }) => {
-  const [queryClient] = useState(() => new QueryClient());
-
-  return (
-    <QueryClientProvider client={queryClient}>
-      {children}
-      <ReactQueryDevtools initialIsOpen={false} />
-    </QueryClientProvider>
-  );
-};
+export const Providers: FCC = ({ children }) => (
+  <ToastProvider>
+    <ModalProvider>
+      <QueryClientProvider>{children}</QueryClientProvider>
+    </ModalProvider>
+  </ToastProvider>
+);
